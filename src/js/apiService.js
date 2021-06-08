@@ -25,12 +25,3 @@ export default {
     this.page = 1;
   },
 };
-
-
-
-// const BASE_URL = 'https://pixabay.com/api';
-// const KEY = '21935318-c1f2aed7e7c83eceedbf4cf2c';
-
-// function fetchPhoto ( photoGenre ){
-//     return fetch(`${BASE_URL}/?image_type=photo&orientation=horizontal&q=${photoGenre}&page=${pageNumber}&per_page=12&key=${KEY}`).then(response => response.json(),);
-// }
