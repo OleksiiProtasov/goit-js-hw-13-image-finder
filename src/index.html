@@ -10,12 +10,29 @@
       integrity="sha512-ISS7cAi1PEhQ8jnbJpJZMd29NlhNj4AWYyLOSp2CE/CsHxTCu+r+t0D2yoJudVrd0/8fTVPUVDzY5Tvli75u/g=="
       crossorigin="anonymous"
     />
+    <link
+     href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"
+     />
   </head>
   <body>
+    <form class="search-form" id="search-form">
+      <input
+        type="text"
+        name="query"
+        class="input"
+        autocomplete="off"
+        placeholder="input there..."
+      />
+      <button class="btn" type="submit">Search</button>
+    </form>
+
     <ul class="gallery">
       <!-- Список <li> с карточками изображений -->
     </ul>
-    <!-- Скрипт идёт последним в разметке. В нём уже подключен главный SASS-файл. -->
-    <!-- <script src="./index.js"></script> -->
+<div class="btnMore">
+  <button class="btn" type="button" data-action="load-more">Load more</button>
+</div>
+
+    <script src="./index.js"></script>
   </body>
 </html>
