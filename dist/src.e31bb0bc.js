@@ -184,7 +184,7 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":"../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"style.css":[function(require,module,exports) {
+},{"./bundle-url":"../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"style.scss":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
@@ -3232,12 +3232,7 @@ function loadMoreBtnHandler() {
     _this.scrollIntoView({
       behavior: 'smooth',
       block: 'end'
-    }); // window.scrollTo(0, 1000);
-    // window.scrollTo({
-    //   top: 1000,
-    //   behavior: 'smooth',
-    // });
-
+    });
   });
 }
 
@@ -3255,10 +3250,10 @@ function clearListItems() {
 },{"./apiService":"js/apiService.js","../templates/templates.hbs":"templates/templates.hbs","./getRefs":"js/getRefs.js","regenerator-runtime":"../node_modules/regenerator-runtime/runtime.js"}],"index.js":[function(require,module,exports) {
 "use strict";
 
-require("./style.css");
+require("./style.scss");
 
 require("./js/imageSearch");
-},{"./style.css":"style.css","./js/imageSearch":"js/imageSearch.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./style.scss":"style.scss","./js/imageSearch":"js/imageSearch.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -3286,7 +3281,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "1736" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "2455" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -31,12 +31,6 @@ function loadMoreBtnHandler() {
     const markup = buildListItemsTemplate(hits);
     iserListItems(markup);
     this.scrollIntoView({behavior: 'smooth', block: 'end',});
-    // window.scrollTo(0, 1000);
-
-    // window.scrollTo({
-    //   top: 1000,
-    //   behavior: 'smooth',
-    // });
   });
 }
 
