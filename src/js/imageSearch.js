@@ -1,7 +1,7 @@
 import servise from './apiService';
 import cardImeges from '../templates/templates.hbs';
 import refs from './getRefs';
-import * as basicLightbox from 'basiclightbox'
+// import * as basicLightbox from 'basiclightbox'
 
 const regeneratorRuntime = require("regenerator-runtime");
 
@@ -9,7 +9,6 @@ refs.searchForm.addEventListener('submit', imageSearchInputHandler);
 refs.loadMoreBtn.addEventListener('click', loadMoreBtnHandler);
 
 function imageSearchInputHandler(e) {
-
   e.preventDefault();
 
   const form = e.currentTarget;
@@ -31,12 +30,20 @@ function loadMoreBtnHandler() {
   servise.fetcArticles().then(hits => {
     const markup = buildListItemsTemplate(hits);
     iserListItems(markup);
-    this.scrollIntoView({behavior: 'smooth', block: 'end',});
   });
 }
 
 function iserListItems(items) {
+  const oldSize = refs.gallery.children.length;
   refs.gallery.insertAdjacentHTML('beforeend', items);
+  const count =  refs.gallery.children.length - oldSize;
+  const element = refs.gallery.children[refs.gallery.children.length - count];
+  console.log(refs.gallery.children.length, oldSize)
+  if(element)
+    element.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+    });
 }
 
 function buildListItemsTemplate(items) {
