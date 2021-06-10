@@ -1,6 +1,7 @@
 import servise from './apiService';
 import cardImeges from '../templates/templates.hbs';
 import refs from './getRefs';
+import * as basicLightbox from 'basiclightbox'
 
 const regeneratorRuntime = require("regenerator-runtime");
 
