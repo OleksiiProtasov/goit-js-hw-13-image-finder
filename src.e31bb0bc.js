@@ -3242,8 +3242,7 @@ function imageSearchInputHandler(e) {
     iserListItems(markup);
   });
 
-  input.value = '';
-  notice();
+  input.value = ''; // notice();
 }
 
 function loadMoreBtnHandler() {
@@ -3259,7 +3258,8 @@ function iserListItems(items) {
   _getRefs.default.gallery.insertAdjacentHTML('beforeend', items);
 
   var count = _getRefs.default.gallery.children.length - oldValue;
-  var element = _getRefs.default.gallery.children[_getRefs.default.gallery.children.length - count];
+  var element = _getRefs.default.gallery.children[_getRefs.default.gallery.children.length - count]; // console.log(refs.gallery.children.length, oldValue)
+
   if (element) element.scrollIntoView({
     behavior: 'smooth',
     block: 'start'
