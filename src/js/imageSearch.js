@@ -41,10 +41,11 @@ function loadMoreBtnHandler() {
 }
 
 function iserListItems(items) {
-  const oldSize = refs.gallery.children.length;
+  const oldValue = refs.gallery.children.length;
   refs.gallery.insertAdjacentHTML('beforeend', items);
-  const count =  refs.gallery.children.length - oldSize;
+  const count =  refs.gallery.children.length - oldValue;
   const element = refs.gallery.children[refs.gallery.children.length - count];
+  console.log(refs.gallery.children.length, oldValue)
   if(element)
     element.scrollIntoView({
       behavior: 'smooth',
