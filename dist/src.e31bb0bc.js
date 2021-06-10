@@ -3254,11 +3254,11 @@ function loadMoreBtnHandler() {
 }
 
 function iserListItems(items) {
-  var oldSize = _getRefs.default.gallery.children.length;
+  var oldValue = _getRefs.default.gallery.children.length;
 
   _getRefs.default.gallery.insertAdjacentHTML('beforeend', items);
 
-  var count = _getRefs.default.gallery.children.length - oldSize;
+  var count = _getRefs.default.gallery.children.length - oldValue;
   var element = _getRefs.default.gallery.children[_getRefs.default.gallery.children.length - count];
   if (element) element.scrollIntoView({
     behavior: 'smooth',

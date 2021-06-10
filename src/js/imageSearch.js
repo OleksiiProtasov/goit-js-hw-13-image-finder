@@ -45,7 +45,6 @@ function iserListItems(items) {
   refs.gallery.insertAdjacentHTML('beforeend', items);
   const count =  refs.gallery.children.length - oldValue;
   const element = refs.gallery.children[refs.gallery.children.length - count];
-  console.log(refs.gallery.children.length, oldValue)
   if(element)
     element.scrollIntoView({
       behavior: 'smooth',
