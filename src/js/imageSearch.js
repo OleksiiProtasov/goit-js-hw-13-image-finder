@@ -1,6 +1,12 @@
 import servise from './apiService';
 import cardImeges from '../templates/templates.hbs';
 import refs from './getRefs';
+import { alert, defaultModules } from '@pnotify/core';
+import * as PNotifyMobile from '@pnotify/mobile';
+
+defaultModules.set(PNotifyMobile, {});
+
+
 // import * as basicLightbox from 'basiclightbox'
 
 const regeneratorRuntime = require("regenerator-runtime");
@@ -24,6 +30,7 @@ function imageSearchInputHandler(e) {
     iserListItems(markup);
   });
   input.value = '';
+  notice();
 }
 
 function loadMoreBtnHandler() {
@@ -38,13 +45,19 @@ function iserListItems(items) {
   refs.gallery.insertAdjacentHTML('beforeend', items);
   const count =  refs.gallery.children.length - oldSize;
   const element = refs.gallery.children[refs.gallery.children.length - count];
-  console.log(refs.gallery.children.length, oldSize)
   if(element)
     element.scrollIntoView({
       behavior: 'smooth',
       block: 'start',
     });
+    
 }
+
+// function notice(){
+//   alert({
+//     text: 'Notice me, senpai!'
+//   });
+// }
 
 function buildListItemsTemplate(items) {
   return cardImeges(items);
