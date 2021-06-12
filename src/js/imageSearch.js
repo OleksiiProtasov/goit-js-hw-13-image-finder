@@ -30,7 +30,6 @@ function imageSearchInputHandler(e) {
     iserListItems(markup);
   });
   input.value = '';
-  // notice();
 }
 
 function loadMoreBtnHandler() {
@@ -51,14 +50,14 @@ function iserListItems(items) {
       behavior: 'smooth',
       block: 'start',
     });
-    
+    notice();
 }
 
-// function notice(){
-//   alert({
-//     text: 'Notice me, senpai!'
-//   });
-// }
+function notice(){
+  alert({
+    text: 'Notice me, senpai!'
+  });
+}
 
 function buildListItemsTemplate(items) {
   return cardImeges(items);
