@@ -3242,7 +3242,7 @@ function imageSearchInputHandler(e) {
     iserListItems(markup);
   });
 
-  input.value = ''; // notice();
+  input.value = '';
 }
 
 function loadMoreBtnHandler() {
@@ -3264,12 +3264,14 @@ function iserListItems(items) {
     behavior: 'smooth',
     block: 'start'
   });
-} // function notice(){
-//   alert({
-//     text: 'Notice me, senpai!'
-//   });
-// }
+  notice();
+}
 
+function notice() {
+  (0, _core.alert)({
+    text: 'Notice me, senpai!'
+  });
+}
 
 function buildListItemsTemplate(items) {
   return (0, _templates.default)(items);
